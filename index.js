@@ -12,8 +12,8 @@ async function scrapeMercadoLibre(searchQuery) {
     //const firstButtonSelectorCP = 'button[class="onboarding-cp-button andes-button andes-button--filled andes-button--small"]';
     //const codPostal = 'input["name:zipcode"]';
 
-    await page.click('button[class="onboarding-cp-button andes-button andes-button--transparent andes-button--small"]'); // boton para omitir el codigo postal
-    await page.click('button[data-testid="action:understood-button"]'); //boton para aceptar las cookies 
+    await page?.click('button[class="onboarding-cp-button andes-button andes-button--transparent andes-button--small"]'); // boton para omitir el codigo postal
+    await page?.click('button[data-testid="action:understood-button"]'); //boton para aceptar las cookies 
     //const codPostal = 'input[class="andes-form-control__field"]'; // Selector del campo de entrada de código postal
     //shouldEnterPostalCode && (await page.type(codPostal, '3400'));
 
@@ -29,26 +29,26 @@ async function scrapeMercadoLibre(searchQuery) {
         const attributes = document.querySelectorAll('.ui-search-card-attributes__attribute');
         elements.forEach((element, index) => {
             const title = element.textContent;
-            let price = prices[index].textContent.trim(); // Obtener el precio y eliminar espacios en blanco
-            price = price.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.'); // Agregar puntos en el formato del número
-            price = price.replace(/(\d)(?=(\d{3})+\.)/g, '$1,'); // Reemplazar puntos extra con comas
-            price = price.replace('pesos', ''); // Eliminar la palabra "pesos" si está presente
-            price = price.replace('dólares', ''); // Eliminar la palabra "dólares" si está presente
-            price = price.trim(); // Eliminar espacios en blanco alrededor del precio
-            const parts = price.split(' ');
-            price = parts[1];
-            let modelo = '';
-            let kilometros = '';
+            let price = prices[index].textContent?.trim(); // Obtener el precio y eliminar espacios en blanco
+            price = price?.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.'); // Agregar puntos en el formato del número
+            price = price?.replace(/(\d)(?=(\d{3})+\.)/g, '$1,'); // Reemplazar puntos extra con comas
+            price = price?.replace('pesos', ''); // Eliminar la palabra "pesos" si está presente
+            price = price?.replace('dólares', ''); // Eliminar la palabra "dólares" si está presente
+            price = price?.trim(); // Eliminar espacios en blanco alrededor del precio
+            const parts = price?.split(' ');
+            price = parts?.[1];
+            let model = '';
+            let kilometres = '';
 
             // Obtener el valor del modelo y kilómetros desde las clases de atributos
             attributes.forEach((attribute) => {
-                if (attribute.textContent.includes('Km')) {
-                    kilometros = attribute.textContent;
+                if (attribute.textContent?.includes('Km')) {
+                    kilometres = attribute.textContent;
                 } else {
-                    modelo = attribute.textContent;
+                    model = attribute.textContent ?? '';
                 }
             });
-            items.push({ title, price, modelo, kilometros });
+            items.push({ title, price, model, kilometres });
         });
         return items;
     });
