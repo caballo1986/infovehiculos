@@ -10,9 +10,8 @@ Asegúrate de tener [Node.js](https://nodejs.org/) instalado en tu sistema.
 
 ## Instalación
 
-1. Clona este repositorio en tu máquina local:
+1.Clona este repositorio en tu máquina local:
 
-   ```bash
       git clone https://github.com/caballo1986/infovehiculos
 
 2.Navega al directorio del proyecto:
