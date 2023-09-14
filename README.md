@@ -18,24 +18,24 @@ Asegúrate de tener [Node.js](https://nodejs.org/) instalado en tu sistema.
 
 bash
 Copy code
-cd infovehiculos
+      cd infovehiculos
 
 2.Instala las dependencias:
 
 bash
 Copy code
-npm install
+      npm install
 Uso
 
 Uso
 1.Ejecuta la aplicación de infovehiculos:
 
-npm run watch
+      npm run watch
 
 2.Accede a la API a través de http://localhost:8080/api/vehiculos proporcionando los parámetros marca y modelo en la URL.
 
 Ejemplo de URL de solicitud:
-http://localhost:8080/api/vehiculos?marca=Toyota&modelo=Corolla
+      http://localhost:8080/api/vehiculos?marca=Toyota&modelo=Corolla
 
 Configuración Personalizada
 Puedes personalizar la configuración de búsqueda editando el archivo index.js. Ajusta las URL, los selectores y otras opciones según tus necesidades específicas.
