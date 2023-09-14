@@ -12,22 +12,17 @@ Asegúrate de tener [Node.js](https://nodejs.org/) instalado en tu sistema.
 1. Clona este repositorio en tu máquina local:
 
    ```bash
-   git clone https://github.com/caballo1986/infovehiculos
+      git clone https://github.com/caballo1986/infovehiculos
 
-1.Navega al directorio del proyecto:
+2.Navega al directorio del proyecto:
 
-bash
-Copy code
       cd infovehiculos
 
-2.Instala las dependencias:
+3.Instala las dependencias:
 
-bash
-Copy code
       npm install
-Uso
 
-Uso
+##Uso
 1.Ejecuta la aplicación de infovehiculos:
 
       npm run watch
@@ -35,6 +30,7 @@ Uso
 2.Accede a la API a través de http://localhost:8080/api/vehiculos proporcionando los parámetros marca y modelo en la URL.
 
 Ejemplo de URL de solicitud:
+
       http://localhost:8080/api/vehiculos?marca=Toyota&modelo=Corolla
 
 Configuración Personalizada
