@@ -1,5 +1,6 @@
 # infovehiculos
-# Aplicación de Scraping en JavaScript
+
+Aplicación de Scraping en JavaScript
 
 Esta es una aplicación de scraping en JavaScript que extrae datos de una página web y los muestra o procesa de acuerdo con tus necesidades. En este caso, hemos utilizado Puppeteer para realizar el scraping, pero puedes adaptar este README a otras herramientas de scraping en JavaScript si lo deseas.
 
@@ -22,7 +23,7 @@ Asegúrate de tener [Node.js](https://nodejs.org/) instalado en tu sistema.
 
       npm install
 
-##Uso
+## Uso
 1.Ejecuta la aplicación de infovehiculos:
 
       npm run watch
@@ -33,8 +34,15 @@ Ejemplo de URL de solicitud:
 
       http://localhost:8080/api/vehiculos?marca=Toyota&modelo=Corolla
 
-Configuración Personalizada
+## Configuración Personalizada
 Puedes personalizar la configuración de búsqueda editando el archivo index.js. Ajusta las URL, los selectores y otras opciones según tus necesidades específicas.
 
 // Ejemplo de configuración personalizada
-const searchQuery = 'Toyota Corolla';
+
+      const searchQuery = 'Toyota Corolla';
+
+## Contribuir
+Si deseas contribuir a este proyecto, ¡estamos abiertos a sugerencias y contribuciones! Siéntete libre de crear un issue o enviar un pull request.
+
+## Licencia
+Este proyecto está bajo la Licencia MIT.
